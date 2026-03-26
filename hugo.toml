@@ -20,6 +20,7 @@ pygmentscodefencesguesssyntax = true
 [[params.social]]
 name = "GitHub"
 icon = "github"
+url = "https://github.com/mpapadopoullos"
 
 [[params.social]]
 name = "Twitter"
@@ -28,6 +29,12 @@ icon = "twitter"
 [[params.social]]
 name = "GitLab"
 icon = "gitlab"
+
+[[params.social]]
+name = "Linkedin"
+icon = "linkedin"
+url = "https://www.linkedin.com/in/mpapadopoullos/"
+
 
 # -------------------------------
 # Sections
