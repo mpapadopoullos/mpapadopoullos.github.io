@@ -1,0 +1,43 @@
+# -------------------------------
+# General
+# -------------------------------
+baseURL = 'https://mpapadopoullos.github.io'
+locale = 'en-us'
+title = 'mpx.http'
+theme = 'archie'
+
+# -------------------------------
+# Code Highlight
+# -------------------------------
+pygmentsstyle = "monokai"
+pygmentscodefences = true
+pygmentscodefencesguesssyntax = true
+
+# -------------------------------
+# Social
+# -------------------------------
+
+[[params.social]]
+name = "GitHub"
+icon = "github"
+
+[[params.social]]
+name = "Twitter"
+icon = "twitter"
+
+[[params.social]]
+name = "GitLab"
+icon = "gitlab"
+
+# -------------------------------
+# Sections
+# -------------------------------
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "About"
+url = "/about"
+weight = 3

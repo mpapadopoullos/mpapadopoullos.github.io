@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mpx.http</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on mpx.http</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 26 Mar 2026 15:20:20 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>TradingAgents Analysis</title>
+      <link>http://localhost:1313/posts/trading_agents/</link>
+      <pubDate>Thu, 26 Mar 2026 15:20:20 +0100</pubDate>
+      <guid>http://localhost:1313/posts/trading_agents/</guid>
+      <description>&lt;h1 id=&#34;tradingagents&#34;&gt;TradingAgents&lt;/h1&gt;&#xA;&lt;p&gt;This post will analyze the TradingAgents research paper and its associated code.&#xA;TradingAgents leverages a multi-agent framework to simulate a professional trading firm with distinct roles.&lt;/p&gt;&#xA;&lt;p&gt;The system is built using Python and the &lt;code&gt;LangGraph&lt;/code&gt; library to orchestrate the interactions between agents in a structured workflow.&lt;/p&gt;&#xA;&lt;h2 id=&#34;langchain-and-langgraph&#34;&gt;LangChain and LangGraph&lt;/h2&gt;&#xA;&lt;p&gt;LangChain and LangGraph are Python frameworks for building applications powered by LLMs. LangGraph is an orchestration engine for complex, stateful agent workflows.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>About Me</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;Hello there!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
