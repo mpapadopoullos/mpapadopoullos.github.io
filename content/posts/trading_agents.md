@@ -1,6 +1,8 @@
 +++
 date = '2026-03-26T15:20:20+01:00'
 title = 'TradingAgents Analysis'
+[params]
+    description = ''
 +++
 
 # TradingAgents
