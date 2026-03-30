@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html><head lang="en"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=55910&amp;path=livereload" data-no-instant defer></script>
+<html><head lang="en">
 	<meta charset="utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Renovate in Gitlab - mpx.http</title><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Renovate Bot
@@ -119,8 +119,8 @@ rotate-token:
       main
 Renovate Configuration
 File: config.js" />
-	<meta property="og:image" content="http://localhost:55910/"/>
-	<meta property="og:url" content="http://localhost:55910/posts/renovate/">
+	<meta property="og:image" content="https://mpapadopoullos.github.io/"/>
+	<meta property="og:url" content="https://mpapadopoullos.github.io/posts/renovate/">
   <meta property="og:site_name" content="mpx.http">
   <meta property="og:title" content="Renovate in Gitlab">
   <meta property="og:description" content="Renovate Bot …
@@ -140,16 +140,16 @@ Gitlab Templates stages: - test - deploy - rotate-token include: - project: &#39
 The following tokens are required:
 TOKEN_WITH_MAINTAINER_PERMISSIONS RENOVATE_TOKEN NAME SCOPES ROLES CONTEXT DESCRIPTION RENOVATE_TOKEN api, self_rotate, read_registry DEVELOPER group token Access repositories, create MR, etc TOKEN_WITH_MAINTAINER_PERMISSIONS api, self_rotate MAINTAINER project token Update tokens rotate-token: image: alpine/curl:8.12.0 stage: rotate-token when: always rules: - if: $CI_PIPELINE_SOURCE == &#34;schedule&#34; variables: GROUP_ID: &#34;&lt;GROUP_ID&gt;&#34; before_script: - apk add --no-cache jq script: - |- set -eu function send_request() { curl --silent --show-error --fail-with-body &#34;$@&#34; } function rotate_token() { # TOKEN_SCOPE = { &#34;groups&#34;, &#34;projects&#34; } # ID = { GROUP_ID, PROJECT_ID } local OLD_TOKEN=&#34;$1&#34; local TOKEN_SCOPE=&#34;$2&#34; local ID=&#34;$3&#34; local EXPIRY_DATE=$(date -I -d@&#34;$(( `date &#43;%s`&#43;10*24*60*60))&#34;) local PAYLOAD=&#34;{\&#34;expires_at\&#34;:\&#34;$EXPIRY_DATE\&#34;}&#34; send_request --request POST --header &#34;Authorization: Bearer $OLD_TOKEN&#34; &#34;https://gitlab.com/api/v4/$TOKEN_SCOPE/$ID/access_tokens/self/rotate&#34; --json &#34;$PAYLOAD&#34; \ | jq -r .token } function update_project_variable() { local PROJECT_ID=&#34;$1&#34; local TOKEN_WITH_MAINTAINER_PERMISSIONS=&#34;$2&#34; local NEW_VALUE=&#34;$3&#34; local VARIABLE_NAME=&#34;$4&#34; local PAYLOAD=&#34;{\&#34;value\&#34;:\&#34;$NEW_VALUE\&#34;,\&#34;masked\&#34;:true,\&#34;masked_and_hidden\&#34;:true,\&#34;protected\&#34;:false}&#34; send_request --request PUT --header &#34;Authorization: Bearer $TOKEN_WITH_MAINTAINER_PERMISSIONS&#34; &#34;https://gitlab.com/api/v4/projects/$PROJECT_ID/variables/$VARIABLE_NAME&#34; --json &#34;$PAYLOAD&#34; } function main() { echo &#34;[*] Rotating project level access token (TOKEN_WITH_MAINTAINER_PERMISSIONS)...&#34; local ROTATED_TOKEN_WITH_MAINTAINER_PERMISSIONS ROTATED_TOKEN_WITH_MAINTAINER_PERMISSIONS=$(rotate_token &#34;$TOKEN_WITH_MAINTAINER_PERMISSIONS&#34; &#34;projects&#34; &#34;$CI_PROJECT_ID&#34;) echo &#34;[&#43;] renovate-bot project access token rotated (TOKEN_WITH_MAINTAINER_PERMISSIONS).&#34; echo &#34;[*] Updating TOKEN_WITH_MAINTAINER_PERMISSIONS variable with new value...&#34; update_project_variable &#34;$CI_PROJECT_ID&#34; &#34;$ROTATED_TOKEN_WITH_MAINTAINER_PERMISSIONS&#34; &#34;$ROTATED_TOKEN_WITH_MAINTAINER_PERMISSIONS&#34; &#34;TOKEN_WITH_MAINTAINER_PERMISSIONS&#34; echo &#34;[&#43;] TOKEN_WITH_MAINTAINER_PERMISSIONS variable updated.&#34; echo &#34;================================================================&#34; echo &#34;[*] Rotating group level token (RENOVATE_TOKEN)...&#34; local ROTATED_RENOVATE_TOKEN ROTATED_RENOVATE_TOKEN=$(rotate_token &#34;$RENOVATE_TOKEN&#34; &#34;groups&#34; &#34;$GROUP_ID&#34;) echo &#34;[&#43;] renovate-bot group access token rotated (RENOVATE_TOKEN).&#34; echo &#34;[*] Updating group level variable with new value (RENOVATE_TOKEN)...&#34; update_project_variable &#34;$CI_PROJECT_ID&#34; &#34;$ROTATED_TOKEN_WITH_MAINTAINER_PERMISSIONS&#34; &#34;$ROTATED_RENOVATE_TOKEN&#34; &#34;RENOVATE_TOKEN&#34; echo &#34;[&#43;] RENOVATE_TOKEN variable updated.&#34; } main Renovate Configuration File: config.js">
 
-        <link href="http://localhost:55910/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+        <link href="https://mpapadopoullos.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
 	
 
 	
-	<link rel="stylesheet" type="text/css" media="screen" href="http://localhost:55910/css/main.a87126a5d38398207e58225b2d1a9faf97f546982f44b3ffb9715a264da36c90.css" />
+	<link rel="stylesheet" type="text/css" media="screen" href="https://mpapadopoullos.github.io/css/main.a87126a5d38398207e58225b2d1a9faf97f546982f44b3ffb9715a264da36c90.css" />
 </head>
 <body>
         <div class="content"><header>
 	<div class="main">
-		<a href="http://localhost:55910/">mpx.http</a>
+		<a href="https://mpapadopoullos.github.io/">mpx.http</a>
 	</div>
 	<nav>
 		
@@ -392,6 +392,8 @@ TOKEN_WITH_MAINTAINER_PERMISSIONS RENOVATE_TOKEN NAME SCOPES ROLES CONTEXT DESCR
       href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
+
+
 
 </div>
     </body>
