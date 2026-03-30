@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Multi Agent System Crew - mpx.http</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="CrewAI
+$ uv tool install crewai --upgrade
+Available providers:
+
+openai
+anthropic
+gemini
+nvidia_nim
+groq
+huggingface
+ollama
+watson
+bedrock
+azure
+cerebras
+sambanova
+
+I will use gemini provider:
+$ uv add &#34;crewai[google-genai]&#34;
+File: .env
+MODEL=gemini/gemini-2.5-flash
+GEMINI_API_KEY=AIz...
+Get the API key here: https://aistudio.google.com/api-keys
+Crew
+Docs: https://docs.crewai.com/en/concepts/crews
+A crew in crewAI represents a collaborative group of agents working together to achieve a set of tasks. Each crew defines the strategy for task execution, agent collaboration, and the overall workflow." />
+	<meta property="og:image" content="https://mpapadopoullos.github.io/"/>
+	<meta property="og:url" content="https://mpapadopoullos.github.io/posts/multi-agent-system-crew/">
+  <meta property="og:site_name" content="mpx.http">
+  <meta property="og:title" content="Multi Agent System Crew">
+  <meta property="og:description" content="CrewAI $ uv tool install crewai --upgrade Available providers:
+openai anthropic gemini nvidia_nim groq huggingface ollama watson bedrock azure cerebras sambanova I will use gemini provider:
+$ uv add &#34;crewai[google-genai]&#34; File: .env
+MODEL=gemini/gemini-2.5-flash GEMINI_API_KEY=AIz... Get the API key here: https://aistudio.google.com/api-keys
+Crew Docs: https://docs.crewai.com/en/concepts/crews
+A crew in crewAI represents a collaborative group of agents working together to achieve a set of tasks. Each crew defines the strategy for task execution, agent collaboration, and the overall workflow.">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2026-03-30T12:11:53+02:00">
+    <meta property="article:modified_time" content="2026-03-30T12:11:53+02:00">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Multi Agent System Crew">
+  <meta name="twitter:description" content="CrewAI $ uv tool install crewai --upgrade Available providers:
+openai anthropic gemini nvidia_nim groq huggingface ollama watson bedrock azure cerebras sambanova I will use gemini provider:
+$ uv add &#34;crewai[google-genai]&#34; File: .env
+MODEL=gemini/gemini-2.5-flash GEMINI_API_KEY=AIz... Get the API key here: https://aistudio.google.com/api-keys
+Crew Docs: https://docs.crewai.com/en/concepts/crews
+A crew in crewAI represents a collaborative group of agents working together to achieve a set of tasks. Each crew defines the strategy for task execution, agent collaboration, and the overall workflow.">
+
+        <link href="https://mpapadopoullos.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://mpapadopoullos.github.io/css/main.a87126a5d38398207e58225b2d1a9faf97f546982f44b3ffb9715a264da36c90.css" />
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://mpapadopoullos.github.io/">mpx.http</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/about">About</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+  <article>
+    <div class="post-container">
+      
+      <div class="post-content">
+        <div class="title">
+          <h1 class="title">Multi Agent System Crew</h1>
+          <div class="meta">Posted on Mar 30, 2026</div>
+        </div>
+        
+        <section class="body">
+          <h1 id="crewai">CrewAI</h1>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span><span style="color:#f92672">$</span> uv <span style="color:#66d9ef">tool</span> install crewai <span style="color:#f92672">--</span>upgrade
+</span></span></code></pre></div><p>Available providers:</p>
+<ol>
+<li>openai</li>
+<li>anthropic</li>
+<li>gemini</li>
+<li>nvidia_nim</li>
+<li>groq</li>
+<li>huggingface</li>
+<li>ollama</li>
+<li>watson</li>
+<li>bedrock</li>
+<li>azure</li>
+<li>cerebras</li>
+<li>sambanova</li>
+</ol>
+<p>I will use gemini provider:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ uv add <span style="color:#e6db74">&#34;crewai[google-genai]&#34;</span>
+</span></span></code></pre></div><p>File: .env</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>MODEL<span style="color:#f92672">=</span>gemini/gemini-2.5-flash
+</span></span><span style="display:flex;"><span>GEMINI_API_KEY<span style="color:#f92672">=</span>AIz...
+</span></span></code></pre></div><p>Get the API key here: <a href="https://aistudio.google.com/api-keys">https://aistudio.google.com/api-keys</a></p>
+<h2 id="crew">Crew</h2>
+<p>Docs: <a href="https://docs.crewai.com/en/concepts/crews">https://docs.crewai.com/en/concepts/crews</a></p>
+<p>A crew in crewAI represents a collaborative group of agents working together to achieve a set of tasks. Each crew defines the strategy for task execution, agent collaboration, and the overall workflow.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span>crew <span style="color:#f92672">=</span> Example()<span style="color:#f92672">.</span>crew()
+</span></span><span style="display:flex;"><span>crew<span style="color:#f92672">.</span>kickoff(inputs<span style="color:#f92672">=</span>{<span style="color:#e6db74">&#39;topic&#39;</span>: <span style="color:#e6db74">&#39;AI Agents&#39;</span>})
+</span></span></code></pre></div><h3 id="agents">Agents</h3>
+<p>Docs: <a href="https://docs.crewai.com/en/concepts/agents">https://docs.crewai.com/en/concepts/agents</a></p>
+<p>An agent is an autonomous unit that can:</p>
+<ul>
+<li>Perform specific tasks</li>
+<li>Make decisions based on its role and goal</li>
+<li>Use tools to accomplish objectives</li>
+<li>Communicate and collaborate with other agents</li>
+<li>Maintain memory of interactions</li>
+<li>Delegate tasks when allowed</li>
+</ul>
+<p>There are two ways to create agents in CrewAI: using YAML configuration (recommended) or defining them directly in code.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">researcher</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">role</span>: &gt;<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    {topic} Senior Data Researcher</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">goal</span>: &gt;<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    Uncover cutting-edge developments in {topic}</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">backstory</span>: &gt;<span style="color:#e6db74">
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    You&#39;re a seasoned researcher with a knack for uncovering the latest
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    developments in {topic}. Known for your ability to find the most relevant
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">    information and present it in a clear and concise manner.</span>
+</span></span></code></pre></div><p>Variables in your YAML files (e.g.: <code>{topic}</code>) will be replaced with values then inputs dict when running the crew:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#a6e22e">@CrewBase</span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">Example</span>():
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Example crew&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@agent</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">researcher</span>(self) <span style="color:#f92672">-&gt;</span> Agent:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> Agent(
+</span></span><span style="display:flex;"><span>            config<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>agents_config[<span style="color:#e6db74">&#39;researcher&#39;</span>], <span style="color:#75715e"># type: ignore[index]</span>
+</span></span><span style="display:flex;"><span>            verbose<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>,
+</span></span><span style="display:flex;"><span>            tools<span style="color:#f92672">=</span>[SerperDevTool()]
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">@crew</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">crew</span>(self) <span style="color:#f92672">-&gt;</span> Crew:
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;&#34;&#34;Creates the Example crew&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> Crew(
+</span></span><span style="display:flex;"><span>            agents<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>agents, <span style="color:#75715e"># Automatically created by the @agent decorator</span>
+</span></span><span style="display:flex;"><span>            tasks<span style="color:#f92672">=</span>self<span style="color:#f92672">.</span>tasks, <span style="color:#75715e"># Automatically created by the @task decorator</span>
+</span></span><span style="display:flex;"><span>            process<span style="color:#f92672">=</span>Process<span style="color:#f92672">.</span>sequential,
+</span></span><span style="display:flex;"><span>            verbose<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>,
+</span></span><span style="display:flex;"><span>        )
+</span></span></code></pre></div><h3 id="tasks">Tasks</h3>
+<p>Docs: <a href="https://docs.crewai.com/en/concepts/tasks">https://docs.crewai.com/en/concepts/tasks</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">from</span> crewai <span style="color:#f92672">import</span> Task
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>task <span style="color:#f92672">=</span> Task(
+</span></span><span style="display:flex;"><span>    description<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Evaluate the quality of the given text and provide recommendations.&#34;</span>,
+</span></span><span style="display:flex;"><span>    expected_output<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;A score and a list of recommendations.&#34;</span>,
+</span></span><span style="display:flex;"><span>    agent<span style="color:#f92672">=</span>agent,
+</span></span><span style="display:flex;"><span>    output_pydantic<span style="color:#f92672">=</span>AgentOutput
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><h2 id="flows">Flows</h2>
+<p>Docs: <a href="https://docs.crewai.com/en/concepts/flows">https://docs.crewai.com/en/concepts/flows</a></p>
+<h3 id="human-in-the-loop">Human-in-the-Loop</h3>
+<p>The <code>@human_feedback</code> decorator enables human-in-the-loop workflows by pausing flow execution to collect feedback from a human. This is useful for approval gates, quality review, and decision points that require human judgment.</p>
+<h2 id="skills">Skills</h2>
+<p>Docs: <a href="https://docs.crewai.com/en/concepts/skills">https://docs.crewai.com/en/concepts/skills</a></p>
+<p>Skills are self-contained directories that provide agents with domain-specific instructions, references, and assets. Each skill is defined by a SKILL.md file with YAML frontmatter and a markdown body.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-md" data-lang="md"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>name: my-skill
+</span></span><span style="display:flex;"><span>description: Short description of what this skill does and when to use it.
+</span></span><span style="display:flex;"><span>license: Apache-2.0                    # optional
+</span></span><span style="display:flex;"><span>compatibility: crewai&gt;=0.1.0           # optional
+</span></span><span style="display:flex;"><span>metadata:                              # optional
+</span></span><span style="display:flex;"><span>  author: your-name
+</span></span><span style="display:flex;"><span>  version: &#34;1.0&#34;
+</span></span><span style="display:flex;"><span>allowed-tools: web-search file-read    # optional, space-delimited
+</span></span><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Instructions for the agent go here. This markdown body is injected
+</span></span><span style="display:flex;"><span>into the agent&#39;s prompt when the skill is activated.
+</span></span></code></pre></div><h2 id="tools">Tools</h2>
+<p>Docs: <a href="https://docs.crewai.com/en/concepts/tools">https://docs.crewai.com/en/concepts/tools</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span>$ pip install <span style="color:#e6db74">&#39;crewai[tools]&#39;</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">from</span> crewai_tools <span style="color:#f92672">import</span> (
+</span></span><span style="display:flex;"><span>    DirectoryReadTool,
+</span></span><span style="display:flex;"><span>    FileReadTool,
+</span></span><span style="display:flex;"><span>    SerperDevTool,
+</span></span><span style="display:flex;"><span>    WebsiteSearchTool
+</span></span><span style="display:flex;"><span>)
+</span></span></code></pre></div><h3 id="custom-tools">Custom tools</h3>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-py" data-lang="py"><span style="display:flex;"><span><span style="color:#f92672">from</span> crewai.tools <span style="color:#f92672">import</span> BaseTool
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> typing <span style="color:#f92672">import</span> Type
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> pydantic <span style="color:#f92672">import</span> BaseModel, Field
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyCustomToolInput</span>(BaseModel):
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;&#34;&#34;Input schema for MyCustomTool.&#34;&#34;&#34;</span>
+</span></span><span style="display:flex;"><span>    argument: str <span style="color:#f92672">=</span> Field(<span style="color:#f92672">...</span>, description<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Description of the argument.&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">MyCustomTool</span>(BaseTool):
+</span></span><span style="display:flex;"><span>    name: str <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Name of my tool&#34;</span>
+</span></span><span style="display:flex;"><span>    description: str <span style="color:#f92672">=</span> (
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;Clear description for what this tool is useful for, your agent will need this information to use it.&#34;</span>
+</span></span><span style="display:flex;"><span>    )
+</span></span><span style="display:flex;"><span>    args_schema: Type[BaseModel] <span style="color:#f92672">=</span> MyCustomToolInput
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">def</span> <span style="color:#a6e22e">_run</span>(self, argument: str) <span style="color:#f92672">-&gt;</span> str:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Implementation goes here</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">&#34;this is an example of a tool output, ignore it and move along.&#34;</span>
+</span></span></code></pre></div><h1 id="references">References</h1>
+<ul>
+<li><a href="https://docs.crewai.com/">https://docs.crewai.com/</a></li>
+<li><a href="https://github.com/crewAIInc/crewAI">https://github.com/crewAIInc/crewAI</a></li>
+<li><a href="https://github.com/joaomdmoura/crewai-tools">https://github.com/joaomdmoura/crewai-tools</a></li>
+<li><a href="https://github.com/langchain-ai/langchain-community/tree/main/libs/community/langchain_community/tools">https://github.com/langchain-ai/langchain-community/tree/main/libs/community/langchain_community/tools</a></li>
+<li><a href="https://docs.pydantic.dev/latest/concepts/models/">https://docs.pydantic.dev/latest/concepts/models/</a></li>
+</ul>
+
+        </section>
+        <div class="post-tags">
+          
+          
+          
+        </div>
+      </div>
+
+      
+      
+    </div>
+
+    </article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/mpapadopoullos" rel="me" title="GitHub"><svg class="feather">
+       <use href="/svg/feather-sprite.51cf5647cb1987f769b616558f2620fd9423d72058490231b391bf6aa3744b55.svg#github" />
+    </svg></a><a class="border"></a><a class="soc" href="" rel="me" title="Twitter"><svg class="feather">
+       <use href="/svg/feather-sprite.51cf5647cb1987f769b616558f2620fd9423d72058490231b391bf6aa3744b55.svg#twitter" />
+    </svg></a><a class="border"></a><a class="soc" href="" rel="me" title="GitLab"><svg class="feather">
+       <use href="/svg/feather-sprite.51cf5647cb1987f769b616558f2620fd9423d72058490231b391bf6aa3744b55.svg#gitlab" />
+    </svg></a><a class="border"></a><a class="soc" href="https://www.linkedin.com/in/mpapadopoullos/" rel="me" title="Linkedin"><svg class="feather">
+       <use href="/svg/feather-sprite.51cf5647cb1987f769b616558f2620fd9423d72058490231b391bf6aa3744b55.svg#linkedin" />
+    </svg></a><a class="border"></a></div>
+  <div class="footer-info">
+    2026  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+
+</div>
+    </body>
+</html>
