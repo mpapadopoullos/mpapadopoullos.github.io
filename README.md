@@ -1,0 +1,9 @@
+* https://project-copacetic.github.io/copacetic/website/
+* https://confidentialcontainers.org/
+* https://www.nvidia.com/en-us/ai/nemoclaw/
+* https://www.cedarpolicy.com/en
+* https://bank-vaults.dev/
+* https://bpfman.io/main/#why-ebpf
+* https://kubearmor.io/
+* https://tokenetes.io/
+* https://www.kubewarden.io/
